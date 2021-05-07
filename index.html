@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu arquivo</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <form>
+
+        <div>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome"required autofocus> 
+        </div>
+        <div>
+            <label for="surname">Sobrenome:</label>
+            <input type="text" name="surname" id="surname" placeholder="Digite seu Sobrenome" required> 
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="name@example.com" required> 
+        </div>
+        <div>
+            <label for="dateB">Data de Nascimento:</label>
+            <input type="date" name="dateBirth" id="dateB" required> 
+        </div>
+        <div>
+            <label for="gender">Sexo</label>
+            <select name="gender" id="gender" required>
+                <option disabled selected>Selecione uma opção</option>
+                <option value="masculine">Masculino</option>
+                <option value="feminine">Feminino</option>
+                <option value="other">Outros</option>
+            </select>
+        </div>
+        <div>
+            <label for="areaPerformance">Area de Atuação:</label >
+            <input type="text" name="performance" id="areaPerformance" placeholder="Digite o nome da vaga desejada" required>
+        </div>
+        <div>
+            <label for="description">Quais tecnologias você tem conhecimento:</label>
+            <textarea name="description" id="description" placeholder="Ex: HTML- Participei de projetos"></textarea>
+        </div>
+        <div>
+            <label for="homePage">URL do curriculo:</label>
+            <input type="url" name="homePage" id="homePage" placeholder="Curriculo">
+        </div>
+        <div>
+            <input type="checkbox" name="termUse" id="termUse" required>
+            <label for="termUse" class="declarationLabel">Declaro que li e concordo com os <a href="#" target="_blank">Termos de uso</a></label>
+        </div>
+        <div>
+            <label for="buttonS"></label>
+            <button name="buttonS" id="buttonS">Enviar</button>
+        </div>
+       
+    </form>
+
+    <script type="text/javascript" src="js/Javascript.js"></script>
+</body>
+</html>
