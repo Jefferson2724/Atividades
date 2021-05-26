@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box; 
+}
+
+@keyframes main {
+    0% {box-shadow: -0.4em 0.5em 10px rgb(243, 97, 97);}
+}
+
+@keyframes bola1 {
+    0% {box-shadow: 1em 0.3em 10px rgb(243, 97, 97);}
+}
+@keyframes bola2 {
+    0% {box-shadow: -0.4em -1.2em 10px rgb(243, 97, 97);}
+}
+
+body {
+    margin:0px;
+}
+
+
+.quadrado-principal {
+    margin: auto;
+    margin-top:200px;
+    width: 200px;
+    height: 200px;
+    transform: rotate(-45deg);
+    background-color: red;
+    position: relative;
+    animation-name: main;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.quadrado-principal::after{
+    left:100px;
+    animation-name: bola1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.quadrado-principal::before{
+    top:-100px;
+    animation-name: bola2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.quadrado-principal::after,
+.quadrado-principal::before {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 200px;
+  position: absolute;
+  width: 200px;
+}
