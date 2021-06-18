@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enviar {
+    width: 100px;
+    height: 50px;
+
+    background-color: #ccc;
+    border: unset;
+
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.enviar:hover{
+    background-color: #aaa;
+}
+
+.enviar:active{
+    background-color: #777;
+}
+
+.oi {
+    height: 100px;
+    width: 100px;
+
+    background-color: brown;
+
+    position: fixed;
+    left:0;
+    bottom:0;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.resultados {
+    width: 100%;
+    height: 500px;
+}
