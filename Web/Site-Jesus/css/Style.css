@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url(../img/ceu.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+    width: 100%;
+}
+
+a {
+    font-style: normal;
+    color: black;
+}
+
+q {
+    font-style: italic;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(to right, 
+    rgb(30, 30, 119), 
+    rgb(19, 99, 173), 
+    rgb(0, 130, 210));
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: inherit;
+    padding: 30px;
+
+}
+
+.logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.img-logo{
+    width: 250px;
+    height: 70px;
+    object-fit:cover;
+}
+
+.phrase-header {
+    display:flex;
+    flex-direction: column;
+    font-weight: 900;
+}
+
+.text-header {
+    margin: 0;
+
+    font-size: 30px;
+    font-style: italic;
+
+    background-image: url("../img/texto-dourado.png");
+    background-size: contain;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.libre-of-bible {
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(199, 179, 0);
+
+    font-size: 20px;
+}
+
+/* banner */
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 800px;
+}
+
+.bible{
+    width: 310px;
+}
+
+.img-bible{
+    width: 100%;
+}
+
+.text-bible {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(74,40,24);
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.explanation {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+}
+
+.text-explanation1,
+.text-explanation2 {
+    width: 350px;
+    height: 305px;
+
+    position: absolute;
+    bottom: 120px;
+
+    border-radius: 30px;
+    background-color: yellow;
+}
+
+.text-explanation1{
+    right: 50px;
+
+    border-top-left-radius: 80px;
+}
+
+.text-explanation2 {
+    left: 50px;
+    
+    border-top-right-radius: 80px;
+}
+
+.quote-bible {
+    font-weight: 900;
+    font-size: 25px;
+    font-variant:small-caps;
+    word-spacing: -4px;
+    
+    background-image: url("../img/texto-dourado.png");
+    background-size: cover;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1130px){
+    #banner {
+        flex-direction: column;
+        height: 900px;
+        padding:30px;
+    }
+    
+    .explanation{
+        position: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
+    .text-explanation1,
+    .text-explanation2 {
+        position: unset;
+        margin:0 10px
+    }
+}
+
+@media (max-width:950px){
+    /* header */
+    .img-logo{
+        width: 180px;
+    }
+
+    .text-header{
+        font-size:22px;
+    }
+
+    .libre-of-bible{
+        font-size:16px;
+    }
+}
+
+@media (max-width:740px){
+    /* header */
+
+    header {
+        height: 170px;
+    }
+
+    .container-header {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    /* banner */
+    .explanation{
+        position: relative;
+        width: 350px;
+        height: 300px;
+        margin: 50px 0;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .explanation::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+
+    .text-explanation1,
+    .text-explanation2{
+        flex: none;
+
+        margin: 0 10px;
+        width: 100%;
+        height: 100%;
+
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+
+        scroll-snap-align: start;
+        pointer-events: none;
+    }
+
+    .arrow {
+        position: absolute;
+        margin-top: 30px;
+        font-size: 40px;
+    }
+
+    .button-arrow:hover {
+        border-radius: 100%;
+        background-color:rgba(139, 139, 139, 0.445);
+    }
+
+    .button-arrow p {
+        margin: 5px;
+        padding: 0 6px;
+        color: rgb(199, 179, 0);
+        opacity: 0.4;
+
+    }
+
+    .button-arrow p:hover{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 45px;
+    opacity: 1;
+
+    background-image: url("../img/texto-dourado.png");
+    background-size: cover;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: all 0.5s;
+    }
+
+    .button-arrow p:active{
+        color: white;
+
+    }
+
+    .left{
+        left:9px;
+    }
+
+    .right{
+        right: -9px;
+    }
+}
+
+@media (max-width: 580px){
+    .container-header{
+        padding: 0;
+    }
+
+    .bible{
+        width: 90%;
+    }
+}
